@@ -13,6 +13,10 @@ const routes = [{
         element: < Main / > ,
     },
     {
+        path: "react_p",
+        element: < Main / > ,
+    },
+    {
         path: "b2s",
         element: < B2s / > ,
     },
