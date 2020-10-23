@@ -53,7 +53,10 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
+@app.get("/")
+def read_root():
+    return {"Hello": "World"}
+    
 @app.get("/b2s/{text}")
 def bit2int(text:str):
     s = int(text[0])

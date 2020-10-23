@@ -17,19 +17,19 @@ import { getElimination } from "../functions/function";
 
 function Elimination() {
   const navigate = useNavigate();
-  const [a00, seta00] = useState(6);
-  const [a01, seta01] = useState(-4);
-  const [a02, seta02] = useState(1);
-  const [a10, seta10] = useState(-4);
-  const [a11, seta11] = useState(6);
-  const [a12, seta12] = useState(-4);
-  const [a20, seta20] = useState(1);
-  const [a21, seta21] = useState(-4);
-  const [a22, seta22] = useState(6);
+  const [a00, seta00] = useState();
+  const [a01, seta01] = useState();
+  const [a02, seta02] = useState();
+  const [a10, seta10] = useState();
+  const [a11, seta11] = useState();
+  const [a12, seta12] = useState();
+  const [a20, seta20] = useState();
+  const [a21, seta21] = useState();
+  const [a22, seta22] = useState();
 
-  const [b1, setb1] = useState(-14);
-  const [b2, setb2] = useState(36);
-  const [b3, setb3] = useState(6);
+  const [b1, setb1] = useState();
+  const [b2, setb2] = useState();
+  const [b3, setb3] = useState();
 
   const [x0, setx0] = useState();
   const [x1, setx1] = useState();
@@ -42,7 +42,9 @@ function Elimination() {
 
   const generate = () => {
     const data = {
-      A:[[a00,a01,a02],[a10,a11,a12],[a20,a21,a22]],
+      A:[[a00,a01,a02],
+      [a10,a11,a12],
+      [a20,a21,a22]],
       b:[b1,b2,b3]
       
     };
@@ -62,10 +64,10 @@ function Elimination() {
            <h2  align= "center"><u>Linear Equations</u></h2>
         <Card style={{ marginTop: "40px", marginRight: "0px",margin: "10",backgroundColor: "" }}>
         <h4 style={{ marginTop: "10px", marginLeft: "10px" }} >exam:</h4>
-           <h5 style={{ marginTop: "50px", marginRight: "110px",margin: "70px",backgroundColor: "#B8860B" }}>
-                   A : R1 = [ 6, -4 , 1] ,
-                 R2 = [-4 , 6 , -4] ,
-                 R3 = [1 , -4 , 6]  
+           <h5 style={{ marginTop: "50px", marginRight: "110px",margin: "70px",}}>
+                 A : R1 = [ 6, -4 , 1] ,<br></br>
+                 R2 = [-4 , 6 , -4] ,<br></br>
+                 R3 = [1 , -4 , 6] <br></br>
 
                  B : Col = [-14 , 36 , 6] 
            </h5>
