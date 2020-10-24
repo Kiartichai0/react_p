@@ -17,8 +17,8 @@ import { useNavigate } from "react-router-dom";
 
 function B2s() {
     const navigate = useNavigate();
-    const [bit2string, setBit2string] = useState("");
-    const [result, setResult] = useState("01111000000001010000000000000000");
+    const [bit2string, setBit2string] = useState("01111000000001010000000000000000");
+    const [result, setResult] = useState("");
     const generate = () => {
         getB2s(bit2string).then((res) => {
             setResult(res);
