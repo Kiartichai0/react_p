@@ -78,8 +78,8 @@ function Elimination() {
            <h5 style={{ marginTop: "50px", marginRight: "110px",margin: "70px",}}>
            <b>example:</b><br></br>
             &nbsp; A : &nbsp;R1 = [ 6, -4 , 1] ,<br></br>
-            &nbsp;   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;R2 = [-4 , 6 , -4] ,<br></br>
-            &nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;R3 = [1 , -4 , 6] <br></br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;R2 = [-4 , 6 , -4] ,<br></br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;R3 = [1 , -4 , 6] <br></br>
             &nbsp;  B : Col = [-14 , 36 , 6] 
            </h5>
         
