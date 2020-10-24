@@ -1,7 +1,7 @@
 import axios from "axios";
 
-// const apiHost = "http://127.0.0.1:8000";
-const apiHost = "https://worawitboat.tk";
+const apiHost = "http://127.0.0.1:8000";
+//const apiHost = "https://worawitboat.tk";
 
 export const getB2s = (b2s) => {
     return axios
