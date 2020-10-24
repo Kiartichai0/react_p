@@ -29,15 +29,18 @@ function B2s() {
         navigate("/");
     };
 
-    return ( <div class = "body" >
-        <
-        Row style = {{ marginTop: "15%" } } >
+    return ( 
+    <div class = "body" >
+        <Row style = {{ marginTop: "15%" } } >
         <Col sm = "2" > </Col> <Col sm = "8" >
         <div className = "text-center" >
         <h2 style = {
-            { marginTop: "20px", marginRight: "20px" }} >Basic Computing </h2> 
+            { marginTop: "20px", marginRight: "20px" }} >Basic Computing 
+        </h2> 
             </div > <div className = "text-center" >
-        <p > exam: 01111000000001010000000000000000 </p> 
+        <p>แปลงตัวเลขจากเลขฐานสอง โดยใช้ IEEE single precision format</p>
+        <p>v = ((-1)^s)*(2^e-127)*1.f</p>
+        <p > example: 01111000000001010000000000000000 </p> 
         </div > 
         <div >
         <Row >
@@ -64,7 +67,7 @@ function B2s() {
         } >
         <Col sm = "8" >
         <Button onClick = { generate }
-        color = "primary" >
+        color = "danger" >
         <div style = {
             { width: 300 }
         } >
@@ -74,7 +77,7 @@ function B2s() {
         </Col > 
         <Col sm = "4" >
         <Button onClick = { back }
-        color = "secondary" >
+        color = "primary" >
         <div style = {
             { width: 100 }
         } >

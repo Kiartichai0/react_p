@@ -17,19 +17,19 @@ import { getInterpolation } from "../functions/function";
 
 function Interpolation() {
   const navigate = useNavigate();
-  const [x, setx] = useState();
-  const [xi1, setxi1] = useState();
-  const [xi2, setxi2] = useState();
-  const [xi3, setxi3] = useState();
-  const [xi4, setxi4] = useState();
-  const [xi5, setxi5] = useState();
-  const [xi6, setxi6] = useState();
-  const [yi1, setyi1] = useState();
-  const [yi2, setyi2] = useState();
-  const [yi3, setyi3] = useState();
-  const [yi4, setyi4] = useState();
-  const [yi5, setyi5] = useState();
-  const [yi6, setyi6] = useState();
+  const [x, setx] = useState(5);
+  const [xi1, setxi1] = useState(0);
+  const [xi2, setxi2] = useState(8);
+  const [xi3, setxi3] = useState(14);
+  const [xi4, setxi4] = useState(20);
+  const [xi5, setxi5] = useState(23);
+  const [xi6, setxi6] = useState(30);
+  const [yi1, setyi1] = useState(0);
+  const [yi2, setyi2] = useState(50);
+  const [yi3, setyi3] = useState(96);
+  const [yi4, setyi4] = useState(110);
+  const [yi5, setyi5] = useState(100);
+  const [yi6, setyi6] = useState(86);
 
   const [result, setresult] = useState();
 
@@ -57,11 +57,15 @@ function Interpolation() {
         <div className="text-center">
            <h2 style={{ marginTop: "20px", marginRight: "20px" }}>Interpolation</h2>
         </div>
-        <div className="text-center">
-           <p>exam:</p>
-           <p>t = 5</p>
-           <p>x = [ 0, 8, 14, 20, 23, 30 ]</p>
-           <p>y = [ 0, 50, 96, 110, 100, 86 ]</p>
+        <div className="text">
+          <h5>Quadratic Interpolation</h5>
+           <p>y(x)=L0(x)y0+L1(x)y1+L2(x)y2</p>
+        </div>
+        <div className="text">
+           <p>example:</p>
+           <p>&nbsp;&nbsp;&nbsp;t = 5</p>
+           <p>&nbsp;&nbsp;&nbsp;x = [ 0, 8, 14, 20, 23, 30 ]</p>
+           <p>&nbsp;&nbsp;&nbsp;y = [ 0, 50, 96, 110, 100, 86 ]</p>
         </div>
        
           <Card style={{ alignItems: "center" }}>
@@ -260,14 +264,14 @@ function Interpolation() {
 
             <Row style={{ marginBottom: "30px" }}>
               <Col sm="8">
-                <Button onClick={generate} color="primary">
+                <Button onClick={generate} color="danger">
                   <div style={{ width: 300 }}>
                     <h3 style={{ marginTop: "10px" }}>คำนวณ</h3>
                   </div>
                 </Button>
               </Col>
               <Col sm="4">
-                <Button onClick={back} color="secondary">
+                <Button onClick={back} color="primary">
                   <div style={{ width: 100 }}>
                     <h3 style={{ marginTop: "10px" }}>กลับ</h3>
                   </div>

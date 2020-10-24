@@ -19,8 +19,8 @@ function Integration() {
   const navigate = useNavigate();
 
   const [result, setresult] = useState();
-  const [a, seta] = useState();
-  const [b, setb] = useState();
+  const [a, seta] = useState(0);
+  const [b, setb] = useState(3);
 
   const back = () => {
     navigate("/");
@@ -45,17 +45,18 @@ function Integration() {
               Integration
             </h2>
           </div>
-          <div className="text-center">
-            <p>exam:</p>
-            <p>a = 0</p>
-            <p>b = 3</p>
+          <div className="text">
+            <h4>Simpson's rule</h4>
+            <p>กำหนดให้ f(x)=(3*x^2)+(9*x)+2  และ n = 4</p>
+            <p>example:</p>
+            <p>&nbsp;&nbsp;a = 0</p>
+            <p>&nbsp;&nbsp;b = 3</p>
           </div>
 
           <Card style={{ alignItems: "center" }}>
             <Row style={{ marginTop: "50px" }}>
               <Col></Col>
             </Row>
-
             <Row>
               <div className="text-center">
                 <Row>
@@ -94,14 +95,14 @@ function Integration() {
 
             <Row style={{ marginBottom: "30px" }}>
               <Col sm="8">
-                <Button onClick={generate} color="primary">
+                <Button onClick={generate} color="danger">
                   <div style={{ width: 300 }}>
                     <h3 style={{ marginTop: "10px" }}>คำนวณ</h3>
                   </div>
                 </Button>
               </Col>
               <Col sm="4">
-                <Button onClick={back} color="secondary">
+                <Button onClick={back} color="primary">
                   <div style={{ width: 100 }}>
                     <h3 style={{ marginTop: "10px" }}>กลับ</h3>
                   </div>

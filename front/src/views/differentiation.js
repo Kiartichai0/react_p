@@ -17,8 +17,8 @@ import { getDifferentiation } from "../functions/function";
 
 function Differentiation() {
   const navigate = useNavigate();
-  const [h, seth] = useState();
-  const [p, setp] = useState();
+  const [h, seth] = useState(0.64);
+  const [p, setp] = useState(2);
 
   const [result, setresult] = useState();
 
@@ -47,12 +47,13 @@ function Differentiation() {
               Differentiation
             </h2>
           </div>
-          <div className="text-center">
-            <p>exam:</p>
-            <p>h = 0.64</p>
-            <p>p = 2</p>
+          <div className="text">
+            <h4>Richardson Extrapolation</h4>
+            <p>G=((2^p)*g(h1/2)−g(h1))/(2^p)−1</p>
+            <p>example:</p>
+            <p>&nbsp;&nbsp;&nbsp;h = 0.64</p>
+            <p>&nbsp;&nbsp;&nbsp;p = 2</p>
           </div>
-
           <Card style={{ alignItems: "center" }}>
             <Row style={{ marginTop: "50px" }}>
               <Col></Col>
@@ -96,14 +97,14 @@ function Differentiation() {
 
             <Row style={{ marginBottom: "30px" }}>
               <Col sm="8">
-                <Button onClick={generate} color="primary">
+                <Button onClick={generate} color="danger">
                   <div style={{ width: 300 }}>
                     <h3 style={{ marginTop: "10px" }}>คำนวณ</h3>
                   </div>
                 </Button>
               </Col>
               <Col sm="4">
-                <Button onClick={back} color="secondary">
+                <Button onClick={back} color="primary">
                   <div style={{ width: 100 }}>
                     <h3 style={{ marginTop: "10px" }}>กลับ</h3>
                   </div>

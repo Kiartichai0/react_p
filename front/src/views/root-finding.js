@@ -17,9 +17,9 @@ import { getRootFinding } from "../functions/function";
 
 function RootFinding() {
   const navigate = useNavigate();
-  const [a, seta] = useState();
-  const [b, setb] = useState();
-  const [dx, setdx] = useState();
+  const [a, seta] = useState(0);
+  const [b, setb] = useState(1);
+  const [dx, setdx] = useState(0.0001);
   const [result, setresult] = useState();
 
   const back = () => {
@@ -48,11 +48,13 @@ function RootFinding() {
               Root-finding
             </h2>
           </div>
-          <div className="text-center">
-            <p>exam:</p>
-            <p>a = 0</p>
-            <p>b = 1</p>
-            <p>dx = 0.0001</p>
+          <div className="text">
+            <h4>Incremental Search Method</h4>
+            <p>กำหนด f(x)=x3−10x2+5 จงหารากของสมการ f(x) * จะเห็นว่าเมื่อ x=0 แล้ว sign(f(0)) จะมีค่าเป็น + * เมื่อ x=1 แล้ว sign(f(1)) จะมีค่าเป็น - * สันนิษฐานว่า root จะมีค่าอยู่ระหว่าง (0,1) จงหา root ของ f(x) ให้มีค่าใกล้เคียง 4 หลัก โดยเราจะใช้ Δ=0.0001</p>
+            <p>example:</p>
+            <p>&nbsp;&nbsp;&nbsp;a = 0</p>
+            <p>&nbsp;&nbsp;&nbsp;b = 1</p>
+            <p>&nbsp;&nbsp;&nbsp;dx = 0.0001</p>
           </div>
 
           <Card style={{ alignItems: "center" }}>
@@ -113,14 +115,14 @@ function RootFinding() {
 
             <Row style={{ marginBottom: "30px" }}>
               <Col sm="8">
-                <Button onClick={generate} color="primary">
+                <Button onClick={generate} color="danger">
                   <div style={{ width: 300 }}>
                     <h3 style={{ marginTop: "10px" }}>คำนวณ</h3>
                   </div>
                 </Button>
               </Col>
               <Col sm="4">
-                <Button onClick={back} color="secondary">
+                <Button onClick={back} color="primary">
                   <div style={{ width: 100 }}>
                     <h3 style={{ marginTop: "10px" }}>กลับ</h3>
                   </div>

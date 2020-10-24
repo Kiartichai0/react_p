@@ -17,19 +17,19 @@ import { getElimination } from "../functions/function";
 
 function Elimination() {
   const navigate = useNavigate();
-  const [a00, seta00] = useState();
-  const [a01, seta01] = useState();
-  const [a02, seta02] = useState();
-  const [a10, seta10] = useState();
-  const [a11, seta11] = useState();
-  const [a12, seta12] = useState();
-  const [a20, seta20] = useState();
-  const [a21, seta21] = useState();
-  const [a22, seta22] = useState();
+  const [a00, seta00] = useState(6);
+  const [a01, seta01] = useState(-4);
+  const [a02, seta02] = useState(1);
+  const [a10, seta10] = useState(-4);
+  const [a11, seta11] = useState(6);
+  const [a12, seta12] = useState(-4);
+  const [a20, seta20] = useState(1);
+  const [a21, seta21] = useState(-4);
+  const [a22, seta22] = useState(6);
 
-  const [b1, setb1] = useState();
-  const [b2, setb2] = useState();
-  const [b3, setb3] = useState();
+  const [b1, setb1] = useState(-14);
+  const [b2, setb2] = useState(36);
+  const [b3, setb3] = useState(6);
 
   const [x0, setx0] = useState();
   const [x1, setx1] = useState();
@@ -63,13 +63,24 @@ function Elimination() {
         <div className="text">
            <h2  align= "center"><u>Linear Equations</u></h2>
         <Card style={{ marginTop: "40px", marginRight: "0px",margin: "10",backgroundColor: "" }}>
-        <h4 style={{ marginTop: "10px", marginLeft: "10px" }} >exam:</h4>
+        <div className="text-center">
+          <h4>Elimination Phase</h4>
+          <p>Ax=b</p>
+          <p>A[i,j]=A[i,j]−λA[k,j],j=k,k+1,...,n</p>
+          <p>bi=bi−λbk</p>
+          <h4>Back Substitution</h4>
+          <p>Ux=c</p>
+          <p>หลังจาก elimination phase ไปแล้วจะได้ U=A,c=b</p>
+          <p>จึงเขียนใหม่ได้เป็น</p>
+          <p>x[k]=b[k]−(∑(j=k+1)=>(n)(A[k,j]*x[j]))*1/A[k,k]</p>
+          </div>
+        <h5 style={{ marginTop: "10px", marginLeft: "10px" }} ></h5>
            <h5 style={{ marginTop: "50px", marginRight: "110px",margin: "70px",}}>
-                 A : R1 = [ 6, -4 , 1] ,<br></br>
-                 R2 = [-4 , 6 , -4] ,<br></br>
-                 R3 = [1 , -4 , 6] <br></br>
-
-                 B : Col = [-14 , 36 , 6] 
+           <b>example:</b><br></br>
+            &nbsp; A : &nbsp;R1 = [ 6, -4 , 1] ,<br></br>
+            &nbsp;   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;R2 = [-4 , 6 , -4] ,<br></br>
+            &nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;R3 = [1 , -4 , 6] <br></br>
+            &nbsp;  B : Col = [-14 , 36 , 6] 
            </h5>
         
           </Card>
@@ -255,7 +266,7 @@ function Elimination() {
             </Row>
             <Row style={{ marginBottom: "50px" }}>
               <Col sm="8">
-                <Button onClick={generate} color="success">
+                <Button onClick={generate} color="danger">
                   <div style={{ width: 200 }}>
                     <h3 style={{ marginTop: "5px" }}>คำนวณ</h3>
                   </div>
