@@ -43,7 +43,6 @@ origins = [
     "http://localhost:8000/differentiation",
     "http://localhost:8000/integration",
     "http://localhost:8000/root-finding",
-    "https://Kiartichai.github.io//b2s"
 
 ]
 
